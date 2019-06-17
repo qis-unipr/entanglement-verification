@@ -10,13 +10,13 @@ To setup the network, type:
 * simulaqron set backend projectq
 * simulaqron set nodes-file ./config/Nodes.cfg
 * simulaqron set app-file ./config/appNodes.cfg
-simulaqron set cqc-file ./config/cqcNodes.cfg
-simulaqron set vnode-file ./config/virtualNodes.cfg
-simulaqron set topology-file ./config/topology.json
-simulaqron set max-qubits 40
-simulaqron set max-registers 100
-simulaqron set recv-timeout 2.0
-simulaqron set log-level debug 
+* simulaqron set cqc-file ./config/cqcNodes.cfg
+* simulaqron set vnode-file ./config/virtualNodes.cfg
+* simulaqron set topology-file ./config/topology.json
+* simulaqron set max-qubits 40
+* simulaqron set max-registers 100
+* simulaqron set recv-timeout 2.0
+* simulaqron set log-level debug 
 
 To start SimulaQron, type:
 
