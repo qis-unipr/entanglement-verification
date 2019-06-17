@@ -7,9 +7,9 @@ Then checkout this repository and enter it from your (bash) shell.
 
 To setup the network, type:
 
-simulaqron set backend projectq
-simulaqron set nodes-file ./config/Nodes.cfg
-simulaqron set app-file ./config/appNodes.cfg
+* simulaqron set backend projectq
+* simulaqron set nodes-file ./config/Nodes.cfg
+* simulaqron set app-file ./config/appNodes.cfg
 simulaqron set cqc-file ./config/cqcNodes.cfg
 simulaqron set vnode-file ./config/virtualNodes.cfg
 simulaqron set topology-file ./config/topology.json
