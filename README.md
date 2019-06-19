@@ -24,7 +24,7 @@ To start SimulaQron, type:
 
 * simulaqron start
 
-To start the tests, for example with NA2010 and m=3, enter the corresponding folder and type:
+To start the tests, for example with NA2010 and m=5, enter the corresponding folder and type:
 
 * ./run.sh > NA2010-m5.txt &
 
