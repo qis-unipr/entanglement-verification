@@ -1,31 +1,43 @@
-# entanglement-verification
+# Entanglement Verification
 
-We implemented a few protocols for entanglement verification. To run the protocols, you need SimulaQron:
+Implementation and testing of the NA2010, AC1 and AC2 protocols with [SimulaQron](http://www.simulaqron.org/) v.3.0.10
 
-* pip3 install simulaqron
+### Prerequisites
 
-Then checkout this repository and enter it from your (bash) shell.
+* [SimulaQron](http://www.simulaqron.org/)
 
-To setup the network, type:
+  Please refer to the [Getting started](https://softwarequtech.github.io/SimulaQron/html/GettingStarted.html) page of the SimulaQron guide for installation instructions.
 
-* simulaqron set backend projectq
-* simulaqron set nodes-file ./config/Nodes.cfg
-* simulaqron set app-file ./config/appNodes.cfg
-* simulaqron set cqc-file ./config/cqcNodes.cfg
-* simulaqron set vnode-file ./config/virtualNodes.cfg
-* simulaqron set topology-file ./config/topology.json
-* simulaqron set max-qubits 40
-* simulaqron set max-registers 100
-* simulaqron set recv-timeout 2.0
-* simulaqron set log-level debug
+### Setup
 
-To start SimulaQron, type:
+    1. To change the setup of the network, edit the .simulaqron.json file in each folder NA2010/, AC1/ and AC2/.
+    See: https://softwarequtech.github.io/SimulaQron/html/ConfNodes.html
+    The default configuration is:
+    ```
+    {
+        "backend": "projectq",
+        "log-level": 10
+        "max-qubits": 40
+        "max-registers":100
+        "recv-timeout":2.0
+    }
 
-* simulaqron start
+    ```
 
-To start the tests, for example with NA2010 and m=5, enter the corresponding folder and type:
+## Running
 
-* ./run.sh > NA2010-m5.txt &
+    1. To start SimulaQron, open a first shell and execute:
+       ```
+       simulaqron start --nodes node0,node1
+
+       ```
+
+    2. Open a second shell, enter for example the NA2010/ folder and execute:
+       ```
+       ./run.sh > NA2010-m5.txt &
+       ```
+
+### Logging
 
 Once the simulation has completed, to enumerate the "compromised" and "abort" labels, type:
 
