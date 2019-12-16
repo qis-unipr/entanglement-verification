@@ -57,7 +57,7 @@ try:
     elif (sys.argv[1] == 'real'):
         backend = least_busy(IBMQ.get_provider(hub='ibm-q').backends(filters=lambda x: x.configuration().n_qubits == 5 and not x.configuration().simulator))
         print("Running on current least busy device: ", backend)
-    job_sim = execute(AL1circuit, backend, shots=1000)
+    job_sim = execute(AL1circuit, backend, shots=8000)
     result_sim = job_sim.result()
     print(result_sim.get_counts(AL1circuit))
 
